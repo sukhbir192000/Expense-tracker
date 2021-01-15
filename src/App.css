@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+    width:350px;
+    margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title{
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Balance */
+
+.total-balance-container{
+    margin-top: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.total-balance-amount{
+    font-size: 2rem;
+}
+
+.summary-container{
+    background: #fff;
+    margin: 1.2rem 0;
+    padding: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 2px #bbb;
+    font-weight: 500;
+    text-align: center;
+}
+
+.summary-container>div:first-child{
+    border-right: 1px solid #bbb;
+}
+
+.summary-heading{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.money{
+    font-size: 1.3rem;
+    margin: 0.3rem;
+}
+
+.money-plus{
+    color: #2ecc71;
+}
+
+.money-minus{
+    color: #c0392b;
+}
+
+h3{
+    margin: 2rem 0 0.7rem;
+    border-bottom: 1px solid #bbb;
+    padding: 10px;
+}
+
+.no-history{
+    text-align: center;
+}
+
+.history-item{
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px #bbb;
+    margin-top: 0.7rem;
+}
+
+.income-item{
+    border-right: 5px solid #2ecc71;
+}
+
+.expense-item{
+    border-right: 5px solid #c0392b;
+}
+
+.cross{
+    position: absolute;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 2px 4px;
+    left: 0px;
+    border-radius: 2px;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.history-item:hover .cross{
+    opacity: 1;
+}
+
+label{
+    display: block;
+    margin: 0.7rem 0;
+}
+
+input{
+    border: 1px solid #dedede;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.btn{
+    background-color: #9c88ff;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 0.7rem;
+    margin-bottom: 10rem;
+    padding: 0.5rem;
+    border: 0;
+    font-size: 16px;
 }
